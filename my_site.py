@@ -13,6 +13,10 @@ class Site:
     def __sub__(self, other):
         return self.height - other.height
 
+    def reset(self):
+        self.height = 0
+        self.threshold_slope = choice(**self.choice_parameters)
+
     def add_grain(self):
         self.height += 1
 
