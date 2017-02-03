@@ -9,5 +9,10 @@ def moving_average(data, temporal_window=25):
 
 
 def np_moving_average(data, temporal_window=25):
+    """
+    :param data:
+    :param temporal_window:
+    :return:
+    """
     window = np.ones(temporal_window) / temporal_window
-    return np.convolve(data, window, 'same')[:-temporal_window]
+    return np.convolve(data, window, 'valid')
