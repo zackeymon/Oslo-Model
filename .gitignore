@@ -91,4 +91,6 @@ ENV/
 # PyCharm
 .idea/
 
+# Temp files
 test.py
+task*.py
