@@ -23,4 +23,8 @@ def calculate_avalanche_probability(avalanche_data):
 
 def make_log_bins(data, bin_scaling=1.5):
     centres, probabilities = log_bin(data, a=bin_scaling, drop_zeros=False)
-    return centres, probabilities
+    return np.array(centres), np.array(probabilities)
+
+
+def calculate_std_from_cov_matrix(cov):
+    return np.sqrt(np.diag(cov))

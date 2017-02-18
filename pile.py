@@ -16,11 +16,6 @@ class Pile:
             site.reset()
         self.is_at_steady_state = False
 
-    def load(self, config):
-        """DELETE?"""
-        for i, site in enumerate(self.lattice):
-            site.height = config[i]
-
     def get_pile_height(self):
         """Returns the height of 0th site, which is defined as the pile height"""
         return self.lattice[0].height
